@@ -1,0 +1,38 @@
+@model MEE.ViewModels.WorkspaceBookingViewModel
+
+@{
+    ViewData["Title"] = "Reserve Workspace";
+}
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-6 card p-4 shadow-sm">
+        <h3 class="mb-3">Reserve Desk in @ViewBag.WorkspaceName</h3>
+        <p class="text-muted">Max Capacity: <strong>@ViewBag.Capacity desks</strong></p>
+        <hr />
+
+        <form asp-action="Book" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="WorkspaceId" />
+
+            <div class="form-group mb-3">
+                <label asp-for="BookingDate" class="form-label fw-bold">Reservation Date</label>
+                <input asp-for="BookingDate" class="form-control" type="date" min="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                <span asp-validation-for="BookingDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-4">
+                <label asp-for="TimeSlot" class="form-label fw-bold">Time Slot</label>
+                <select asp-for="TimeSlot" class="form-select">
+                    <option value="FullDay">Full Day (8:00 AM - 5:00 PM)</option>
+                    <option value="Morning">Morning Slot (8:00 AM - 12:30 PM)</option>
+                    <option value="Afternoon">Afternoon Slot (1:00 PM - 5:00 PM)</option>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                <button type="submit" class="btn btn-primary">Confirm Reservation</button>
+            </div>
+        </form>
+    </div>
+</div>
