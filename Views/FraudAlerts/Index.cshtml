@@ -1,0 +1,43 @@
+@model IEnumerable<MEE.Models.FraudAlert>
+
+@{
+    ViewData["Title"] = "Anti-Fraud Review Inbox";
+}
+
+<h2 class="mb-4">Anti-Fraud Review Inbox</h2>
+
+<table class="table table-hover align-middle shadow-sm bg-white rounded">
+    <thead class="table-dark">
+        <tr>
+            <th>Detected At (UTC)</th>
+            <th>Employee</th>
+            <th>Rule Triggered</th>
+            <th>Severity</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        var badgeColor = item.SeverityLevel == 3 ? "bg-danger" : (item.SeverityLevel == 2 ? "bg-warning text-dark" : "bg-info text-dark");
+        var statusColor = item.Status == "Pending" ? "badge bg-secondary" : (item.Status == "Dismissed" ? "badge bg-success" : "badge bg-danger");
+        <tr>
+            <td>@item.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+            <td>@item.CheckIn.Employee.FirstName @item.CheckIn.Employee.LastName</td>
+            <td><strong>@item.RuleName</strong></td>
+            <td><span class="badge @badgeColor">Level @item.SeverityLevel</span></td>
+            <td><span class="@statusColor">@item.Status</span></td>
+            <td>
+                @if (item.Status == "Pending")
+                {
+                    <a asp-action="Review" asp-route-id="@item.AlertId" class="btn btn-sm btn-outline-primary">Investigate</a>
+                }
+                else
+                {
+                    <span class="text-muted small">Reviewed</span>
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
