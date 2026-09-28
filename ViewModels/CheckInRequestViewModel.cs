@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MEE.ViewModels
+namespace ManagementEmployeeEnterprise.ViewModels
 {
     public class CheckInRequestViewModel
     {
