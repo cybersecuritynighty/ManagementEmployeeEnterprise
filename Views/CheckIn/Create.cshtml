@@ -1,0 +1,74 @@
+@model MEE.ViewModels.CheckInRequestViewModel
+
+@{
+    ViewData["Title"] = "Daily Check-In";
+}
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-6 card p-4 shadow-sm">
+        <h3 class="text-center mb-4">Live Check-In Portal</h3>
+        
+        <div id="statusAlert" class="alert alert-info text-center">
+            Acquiring GPS coordinates... Please allow location access.
+        </div>
+
+        <form asp-action="Create" id="checkInForm" style="display: none;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <!-- Hidden inputs populated by JavaScript -->
+            <input type="hidden" asp-for="LocationLat" id="latInput" />
+            <input type="hidden" asp-for="LocationLon" id="lonInput" />
+            <input type="hidden" asp-for="CapturedDeviceId" id="deviceInput" />
+            
+            <div class="form-group mb-4">
+                <label class="control-label fw-bold">Select Check-In Method</label>
+                <select asp-for="CheckInMethod" class="form-control form-select">
+                    <option value="GPS">GPS Location (Remote/On-site)</option>
+                    <option value="QR">QR Code Scan (Desk/Office)</option>
+                </select>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                    Confirm Check-In
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const latInput = document.getElementById('latInput');
+            const lonInput = document.getElementById('lonInput');
+            const deviceInput = document.getElementById('deviceInput');
+            const form = document.getElementById('checkInForm');
+            const statusAlert = document.getElementById('statusAlert');
+
+            // Simulate Device ID capture using UserAgent hash for basic tracking
+            deviceInput.value = btoa(navigator.userAgent).substring(0, 50);
+
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        latInput.value = position.coords.latitude;
+                        lonInput.value = position.coords.longitude;
+                        
+                        statusAlert.classList.replace('alert-info', 'alert-success');
+                        statusAlert.innerHTML = "Location acquired successfully. Ready to check in.";
+                        form.style.display = "block";
+                    },
+                    function (error) {
+                        statusAlert.classList.replace('alert-info', 'alert-danger');
+                        statusAlert.innerHTML = "Error capturing location. Please enable GPS permissions.";
+                    },
+                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+                );
+            } else {
+                statusAlert.classList.replace('alert-info', 'alert-danger');
+                statusAlert.innerHTML = "Geolocation is not supported by your browser.";
+            }
+        });
+    </script>
+}
