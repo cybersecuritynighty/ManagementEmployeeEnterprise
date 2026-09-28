@@ -1,0 +1,51 @@
+@model IEnumerable<MEE.Models.CheckIn>
+
+@{
+    ViewData["Title"] = "Attendance History";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Attendance Records</h2>
+    <a asp-action="Create" class="btn btn-success">New Check-In</a>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<table class="table table-hover table-striped border">
+    <thead class="table-dark">
+        <tr>
+            <th>Date & Time (UTC)</th>
+            <th>Employee</th>
+            <th>Method</th>
+            <th>Coordinates (Lat, Lon)</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.CheckInTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+            <td>@item.Employee.FirstName @item.Employee.LastName</td>
+            <td>
+                <span class="badge bg-secondary">@item.CheckInMethod</span>
+            </td>
+            <td>
+                <small>@item.LocationLat, @item.LocationLon</small>
+            </td>
+            <td>
+                @if (item.IsFlagged)
+                {
+                    <span class="badge bg-danger">Flagged for Review</span>
+                }
+                else
+                {
+                    <span class="badge bg-success">Verified</span>
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
