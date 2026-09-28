@@ -1,8 +1,16 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ManagementEmployeeEnterprise.Data;
+using ManagementEmployeeEnterprise.Services.AntiFraud;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+// Register Anti-Fraud Rules (Strategy Pattern)
+builder.Services.AddScoped<IFraudRule, GeoFencingRule>();
+builder.Services.AddScoped<IFraudRule, DeviceSpoofingRule>();
+builder.Services.AddScoped<IFraudRule, ImpossibleTravelRule>();
+builder.Services.AddScoped<AntiFraudEngineService>();
 
 // 1. Configure SQL Server
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
