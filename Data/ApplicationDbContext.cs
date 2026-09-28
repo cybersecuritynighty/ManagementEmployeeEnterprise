@@ -17,6 +17,7 @@ namespace ManagementEmployeeEnterprise.Data
         public DbSet<Workspace> Workspaces { get; set; }
         public DbSet<CheckIn> CheckIns { get; set; }
         public DbSet<FraudAlert> FraudAlerts { get; set; }
+        public DbSet<WorkspaceBooking> WorkspaceBookings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -54,6 +55,25 @@ namespace ManagementEmployeeEnterprise.Data
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.CostPerSqFt).HasColumnType("decimal(18, 2)");
                 entity.Property(e => e.IsActive).HasDefaultValue(true);
+            });
+
+            // Inside OnModelCreating:
+            builder.Entity<WorkspaceBooking>(entity =>
+            {
+                entity.HasKey(e => e.BookingId);
+                entity.Property(e => e.BookingId).HasDefaultValueSql("NEWID()");
+                entity.Property(e => e.TimeSlot).IsRequired().HasMaxLength(20);
+                entity.Property(e => e.Status).HasDefaultValue("Confirmed").HasMaxLength(20);
+
+                entity.HasOne(e => e.Workspace)
+                      .WithMany()
+                      .HasForeignKey(e => e.WorkspaceId)
+                      .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(e => e.Employee)
+                      .WithMany()
+                      .HasForeignKey(e => e.EmployeeId)
+                      .OnDelete(DeleteBehavior.Cascade);
             });
 
             // CheckIn Configuration
