@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Enterprise Reports";
+}
+
+<h2 class="mb-4">Enterprise Reporting Portal</h2>
+
+<div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Attendance Records</h5>
+                <p class="card-text text-muted">Export complete employee check-in history, including GPS coordinates, timestamps, and verification methods.</p>
+                <a asp-action="ExportAttendanceCsv" class="btn btn-outline-primary w-100">
+                    <i class="bi bi-download"></i> Download Attendance CSV
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Anti-Fraud Audit Logs</h5>
+                <p class="card-text text-muted">Export security audit logs containing rule triggers, severity classifications, and review resolutions.</p>
+                <a asp-action="ExportFraudAuditCsv" class="btn btn-outline-danger w-100">
+                    <i class="bi bi-download"></i> Download Fraud Audit CSV
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
