@@ -1,51 +1,91 @@
 is_global = true
 build_property.TargetFramework = net10.0
-build_property.TargetFrameworkIdentifier = .NETCoreApp
-build_property.TargetFrameworkVersion = v10.0
+build_property.TargetFramework = net10.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = ManagementEmployeeEnterprise
 build_property.RootNamespace = ManagementEmployeeEnterprise
-build_property.ProjectDir = /data/data/com.termux/files/home/ManagementEmployeeEnterprise/
+build_property.ProjectDir = /data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /data/data/com.termux/files/home/ManagementEmployeeEnterprise
+build_property.MSBuildProjectDirectory = /data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/Views/Home/Index.cshtml]
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/CheckIn/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hlY2tJbi9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/CheckIn/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hlY2tJbi9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/Departments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVwYXJ0bWVudHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/Employees/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWVzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/FraudAlerts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRnJhdWRBbGVydHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/FraudAlerts/Review.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRnJhdWRBbGVydHMvUmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/RealEstateOptimization/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVhbEVzdGF0ZU9wdGltaXphdGlvbi9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/Views/Shared/Error.cshtml]
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/Reports/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVwb3J0cy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/Views/_ViewImports.cshtml]
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/Workspaces/Book.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV29ya3NwYWNlcy9Cb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/Views/_ViewStart.cshtml]
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/Views/Shared/_Layout.cshtml]
+[/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rcgk9jqwma

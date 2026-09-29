@@ -192,3 +192,13 @@
 /data/data/com.termux/files/home/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.pdb
 /data/data/com.termux/files/home/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.genruntimeconfig.cache
 /data/data/com.termux/files/home/ManagementEmployeeEnterprise/obj/Debug/net10.0/ref/ManagementEmployeeEnterprise.dll
+/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.csproj.AssemblyReference.cache
+/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/obj/Debug/net10.0/rpswa.dswa.cache.json
+/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.GeneratedMSBuildEditorConfig.editorconfig
+/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.AssemblyInfoInputs.cache
+/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.AssemblyInfo.cs
+/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.csproj.CoreCompileInputs.cache
+/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.MvcApplicationPartsAssemblyInfo.cache
+/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.RazorAssemblyInfo.cache
+/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.RazorAssemblyInfo.cs
+/data/data/com.termux/files/home/ManagementEmployeeEnterprise/ManagementEmployeeEnterprise/obj/Debug/net10.0/ManagementEmployeeEnterprise.sourcelink.json
