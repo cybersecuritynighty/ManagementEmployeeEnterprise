@@ -46,7 +46,7 @@ Before setting up the project, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com
+git clone [https://github.com](https://github.com/cybersecuritynighty/ManagementEmployeeEnterprise.git)
 cd ManagementEmployeeEnterprise
 ```
 
